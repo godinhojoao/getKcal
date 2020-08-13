@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*,
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {    
+    --color-background-light: #ff9f9f;
+    --color-background-input-light: #ffffff59; 
+    --color-box-shadow-light: #f53535;
+
+    --color-background-dark: #282828;
+    --color-background-input-dark: #1A1A1A;
+    --color-border-color-dark: #FF7373;
+
+    font-size: 100%;
+}
+
+body {
+    background: var(--color-background-light);
+    color: black;
+}
+
+#container {
+    max-width: 32rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img.logo {
+    height: 4rem;
+}
+
+header i.change-mode {      
+    font-size: 2rem;
+    margin-left: 1rem;
+    transition: color .2s;
+}
+
+header i.darkIcon {
+    color: black;
+}
+
+header i.lightIcon {
+    color: white;
+}
+
+header i.change-mode:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: .3rem;
+}
+
+.form-group input,
+.form-group select {
+    height: 2.3rem;
+    width: 100%;
+    background: var(--color-background-input-light);
+    padding: 0 .5rem;
+    border: 1px  solid transparent;
+    border-radius: .3rem;
+    font-size: .7rem;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.2s ease-in ;
+}
+
+input.darkFields,
+select.darkFields {
+    color: white;
+    background: var(--color-background-input-dark);
+}
+
+input.lightFields,
+select.lightFields {
+    color: black;
+    background: var(--color-background-input-light);
+}
+
+input.darkFields:focus,
+select.darkFields:focus {
+    border-color: #eb4747;
+}
+
+input.lightFields:focus,
+select.lightFields:focus {
+    border-color: black;
+}
+
+.form-group button {
+    background: linear-gradient(to left, #FF7373, #FDDB33);
+    /* box-shadow: 0 .3rem var(--color-box-shadow-light); */
+    height: 2.3rem;
+    width: 100%;
+    color: black;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.form-group button:hover {
+    background: linear-gradient(to left, #fa4d4d, #dfc12b);
+    /* box-shadow: 0 .3rem var(--color-box-shadow-lightWeight); */
+}
+
+.form-group button:active {
+    position: relative;
+    top: 2px;
+    /* box-shadow: none;  */
+}
+
+.form-group+.form-group button {
+    margin-top: 1rem;
+}
+
+
+.result-container h2{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.result-content {
+    margin-top: .3rem;
+    background: #1A1A1A;
+    border: 1px solid transparent;
+    border-radius: .3rem;
+    padding: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.result-content ul li {
+    list-style-type: none;
+    padding-bottom: .5rem;
+    color: white;
+}
+
+.result-content strong {
+    color: #FF7373;
+}
+
+@media (max-width: 690px ) {
+    #container {
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #container {
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #container {
+        max-width: 17rem;   
+    }
+
+    .form-group label {
+        font-size: .7rem;
+    } 
+    .form-group input,
+    .form-group select,
+    .form-group button {
+        font-size: .6rem;
+        height: 2.1rem;
+    }
+
+    .result-container h2 {
+        font-size: .8rem;
+    }
+
+    .result-content {
+        font-size: .8rem;
+    }
+}
