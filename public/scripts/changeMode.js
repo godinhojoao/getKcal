@@ -33,7 +33,8 @@
 
     function isDarkMode(inputs, selects, labels, button) {
 
-        document.body.style.background = "var(--color-background-dark)"
+        document.body.style.background = "var(--color-background-dark)";
+        iconSelectMode.classList.remove('darkIcon');
         iconSelectMode.classList.add('lightIcon');
         
         inputs.forEach((input) => {
@@ -55,7 +56,8 @@
 
     function isLightMode(inputs, selects, labels, button) {
 
-        document.body.style.background = "var(--color-background-light)"
+        document.body.style.background = "var(--color-background-light)";
+        iconSelectMode.classList.remove('lightIcon');
         iconSelectMode.classList.add('darkIcon');
 
         inputs.forEach((input) => {

@@ -58,11 +58,6 @@ header i.lightIcon {
     color: white;
 }
 
-header i.change-mode:hover {
-    cursor: pointer;
-    color: gray;
-}
-
 .form-group {
     display: flex;
     flex-direction: column;
@@ -168,6 +163,14 @@ select.lightFields:focus {
 .result-content strong {
     color: #FF7373;
 }
+
+@media (min-width: 1024px) {
+    header i.change-mode:hover {
+        cursor: pointer;
+        color: gray;
+    }
+}
+
 
 @media (max-width: 690px ) {
     #container {
